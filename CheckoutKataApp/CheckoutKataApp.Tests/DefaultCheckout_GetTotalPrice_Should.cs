@@ -110,5 +110,30 @@ namespace CheckoutKataApp.Tests
 
             Assert.Equal(180, total);
         }
+
+        [Fact]
+        public void ReturnCorrectPriceForComplexCombination()
+        {
+            var configuredPrices = new Dictionary<string, Prices>();
+            configuredPrices["A"] = new Prices() { UnitPrice = 50, SpecialPrice = new SpecialPrice() { Quantity = 3, Price = 130 } };
+            configuredPrices["B"] = new Prices() { UnitPrice = 30, SpecialPrice = new SpecialPrice() { Quantity = 2, Price = 45 } };
+            configuredPrices["C"] = new Prices() { UnitPrice = 20 };
+            configuredPrices["D"] = new Prices() { UnitPrice = 15 }; var defaultPriceCalculator = new DefaultPriceCalculator(configuredPrices);
+            var checkout = new DefaultCheckout(defaultPriceCalculator);
+
+            checkout.Scan("A");
+            checkout.Scan("B");
+            checkout.Scan("A");
+            checkout.Scan("C");
+            checkout.Scan("A");
+            checkout.Scan("D");
+            checkout.Scan("A");
+            checkout.Scan("B");
+            checkout.Scan("C");
+
+            var total = checkout.GetTotalPrice();
+
+            Assert.Equal(280, total);
+        }
     }
 }
