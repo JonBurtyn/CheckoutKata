@@ -32,7 +32,17 @@ namespace CheckoutKataApp
             {
                 if (this.scanned.ContainsKey(configuredPrice.Key))
                 {
-                    price += this.scanned[configuredPrice.Key] * configuredPrice.Value.UnitPrice;
+                    var quantity = this.scanned[configuredPrice.Key];
+                    var specialPrice = configuredPrice.Value.SpecialPrice;
+
+                    if (specialPrice != null)
+                    {
+                        var specialPriceLots = quantity / specialPrice.Quantity;
+                        price += specialPriceLots * specialPrice.Price;
+                        quantity -= specialPriceLots * specialPrice.Quantity;
+                    }
+
+                    price += quantity * configuredPrice.Value.UnitPrice;
                 }
             }
 

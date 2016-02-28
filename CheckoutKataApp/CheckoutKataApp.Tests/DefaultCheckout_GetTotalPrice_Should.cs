@@ -70,5 +70,21 @@ namespace CheckoutKataApp.Tests
 
             Assert.Equal(20, total);
         }
+
+        [Fact]
+        public void ReturnSpecialPriceOf130ForThreeAs()
+        {
+            var configuredPrices = new Dictionary<string, Prices>();
+            configuredPrices["A"] = new Prices() { UnitPrice = 50, SpecialPrice = new SpecialPrice() { Quantity = 3, Price = 130 }};
+            var checkout = new DefaultCheckout(configuredPrices);
+
+            checkout.Scan("A");
+            checkout.Scan("A");
+            checkout.Scan("A");
+
+            var total = checkout.GetTotalPrice();
+
+            Assert.Equal(130, total);
+        }
     }
 }
