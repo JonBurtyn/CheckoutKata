@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="DefaultCheckout_Constructor_Should.cs" />
     <Compile Include="DefaultCheckout_GetTotalPrice_Should.cs" />
+    <Compile Include="DefaultPriceCalculator_Constructor_Should.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

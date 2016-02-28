@@ -10,7 +10,8 @@ namespace CheckoutKataApp.Tests
         {
             var configuredPrices = new Dictionary<string, Prices>();
             configuredPrices["A"] = new Prices() { UnitPrice = 50 };
-            var checkout = new DefaultCheckout(configuredPrices);
+            var defaultPriceCalculator = new DefaultPriceCalculator(configuredPrices);
+            var checkout = new DefaultCheckout(defaultPriceCalculator);
             checkout.Scan("A");
 
             var total = checkout.GetTotalPrice();
@@ -23,7 +24,8 @@ namespace CheckoutKataApp.Tests
         {
             var configuredPrices = new Dictionary<string, Prices>();
             configuredPrices["A"] = new Prices() { UnitPrice = 50 };
-            var checkout = new DefaultCheckout(configuredPrices);
+            var defaultPriceCalculator = new DefaultPriceCalculator(configuredPrices);
+            var checkout = new DefaultCheckout(defaultPriceCalculator);
 
             var total = checkout.GetTotalPrice();
 
@@ -35,7 +37,8 @@ namespace CheckoutKataApp.Tests
         {
             var configuredPrices = new Dictionary<string, Prices>();
             configuredPrices["B"] = new Prices() { UnitPrice = 30 };
-            var checkout = new DefaultCheckout(configuredPrices);
+            var defaultPriceCalculator = new DefaultPriceCalculator(configuredPrices);
+            var checkout = new DefaultCheckout(defaultPriceCalculator);
             checkout.Scan("B");
 
             var total = checkout.GetTotalPrice();
@@ -48,7 +51,8 @@ namespace CheckoutKataApp.Tests
         {
             var configuredPrices = new Dictionary<string, Prices>();
             configuredPrices["A"] = new Prices() { UnitPrice = 50 };
-            var checkout = new DefaultCheckout(configuredPrices);
+            var defaultPriceCalculator = new DefaultPriceCalculator(configuredPrices);
+            var checkout = new DefaultCheckout(defaultPriceCalculator);
 
             checkout.Scan("A");
             checkout.Scan("A");
@@ -63,7 +67,8 @@ namespace CheckoutKataApp.Tests
         {
             var configuredPrices = new Dictionary<string, Prices>();
             configuredPrices["C"] = new Prices() { UnitPrice = 20 };
-            var checkout = new DefaultCheckout(configuredPrices);
+            var defaultPriceCalculator = new DefaultPriceCalculator(configuredPrices);
+            var checkout = new DefaultCheckout(defaultPriceCalculator);
             checkout.Scan("C");
             
             var total = checkout.GetTotalPrice();
@@ -76,7 +81,8 @@ namespace CheckoutKataApp.Tests
         {
             var configuredPrices = new Dictionary<string, Prices>();
             configuredPrices["A"] = new Prices() { UnitPrice = 50, SpecialPrice = new SpecialPrice() { Quantity = 3, Price = 130 }};
-            var checkout = new DefaultCheckout(configuredPrices);
+            var defaultPriceCalculator = new DefaultPriceCalculator(configuredPrices);
+            var checkout = new DefaultCheckout(defaultPriceCalculator);
 
             checkout.Scan("A");
             checkout.Scan("A");
@@ -92,7 +98,8 @@ namespace CheckoutKataApp.Tests
         {
             var configuredPrices = new Dictionary<string, Prices>();
             configuredPrices["A"] = new Prices() { UnitPrice = 50, SpecialPrice = new SpecialPrice() { Quantity = 3, Price = 130 } };
-            var checkout = new DefaultCheckout(configuredPrices);
+            var defaultPriceCalculator = new DefaultPriceCalculator(configuredPrices);
+            var checkout = new DefaultCheckout(defaultPriceCalculator);
 
             checkout.Scan("A");
             checkout.Scan("A");

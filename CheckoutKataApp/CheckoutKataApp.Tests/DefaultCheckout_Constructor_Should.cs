@@ -10,7 +10,7 @@ namespace CheckoutKataApp.Tests
         {
             ArgumentNullException ex = Assert.Throws<ArgumentNullException>(() => new DefaultCheckout(null));
 
-            Assert.Equal("configuredPrices", ex.ParamName);
+            Assert.Equal("priceCalculator", ex.ParamName);
         }
     }
 }
