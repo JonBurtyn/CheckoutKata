@@ -8,7 +8,7 @@ namespace CheckoutKataApp.Tests
         [Fact]
         public void Return50ForOneA()
         {            
-            var checkout = new DefaultCheckout(null);
+            var checkout = new DefaultCheckout(new Dictionary<string, int>());
 
             checkout.Scan("A");
 
@@ -20,7 +20,7 @@ namespace CheckoutKataApp.Tests
         [Fact]
         public void Return0ForNoItems()
         {
-            var checkout = new DefaultCheckout(null);
+            var checkout = new DefaultCheckout(new Dictionary<string, int>());
 
             var total = checkout.GetTotalPrice();
 
@@ -30,7 +30,7 @@ namespace CheckoutKataApp.Tests
         [Fact]
         public void Return30ForOneB()
         {
-            var checkout = new DefaultCheckout(null);
+            var checkout = new DefaultCheckout(new Dictionary<string, int>());
 
             checkout.Scan("B");
 
@@ -42,7 +42,7 @@ namespace CheckoutKataApp.Tests
         [Fact]
         public void Return100ForTwoAs()
         {
-            var checkout = new DefaultCheckout(null);
+            var checkout = new DefaultCheckout(new Dictionary<string, int>());
 
             checkout.Scan("A");
             checkout.Scan("A");
@@ -66,6 +66,5 @@ namespace CheckoutKataApp.Tests
 
             Assert.Equal(20, total);
         }
-
     }
 }

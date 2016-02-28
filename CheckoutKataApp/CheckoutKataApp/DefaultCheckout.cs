@@ -11,6 +11,8 @@ namespace CheckoutKataApp
 
         public DefaultCheckout(Dictionary<string, int> prices)
         {
+            if (prices == null) throw new ArgumentNullException("prices");
+
             this.prices = prices;
         }
 

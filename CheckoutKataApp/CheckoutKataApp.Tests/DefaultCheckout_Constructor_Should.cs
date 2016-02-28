@@ -8,9 +8,9 @@ namespace CheckoutKataApp.Tests
         [Fact]
         public void ThrowExceptionWhenConfiguredPricesAreNull()
         {
-            Exception ex = Assert.Throws<ArgumentNullException>(() => new DefaultCheckout(null));
+            ArgumentNullException ex = Assert.Throws<ArgumentNullException>(() => new DefaultCheckout(null));
 
-            Assert.Equal("prices", ex.Message);
+            Assert.Equal("prices", ex.ParamName);
         }
     }
 }
