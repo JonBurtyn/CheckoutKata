@@ -1,0 +1,17 @@
+D:\Projects\GitHub\CheckoutKata\CheckoutKataApp\CheckoutKataApp.Tests\bin\Debug\xunit.abstractions.dll
+D:\Projects\GitHub\CheckoutKata\CheckoutKataApp\CheckoutKataApp.Tests\bin\Debug\xunit.execution.desktop.dll
+D:\Projects\GitHub\CheckoutKata\CheckoutKataApp\CheckoutKataApp.Tests\bin\Debug\xunit.runner.visualstudio.testadapter.dll
+D:\Projects\GitHub\CheckoutKata\CheckoutKataApp\CheckoutKataApp.Tests\bin\Debug\xunit.runner.utility.desktop.dll
+D:\Projects\GitHub\CheckoutKata\CheckoutKataApp\CheckoutKataApp.Tests\bin\Debug\CheckoutKataApp.Tests.dll
+D:\Projects\GitHub\CheckoutKata\CheckoutKataApp\CheckoutKataApp.Tests\bin\Debug\CheckoutKataApp.Tests.pdb
+D:\Projects\GitHub\CheckoutKata\CheckoutKataApp\CheckoutKataApp.Tests\bin\Debug\CheckoutKataApp.exe
+D:\Projects\GitHub\CheckoutKata\CheckoutKataApp\CheckoutKataApp.Tests\bin\Debug\xunit.assert.dll
+D:\Projects\GitHub\CheckoutKata\CheckoutKataApp\CheckoutKataApp.Tests\bin\Debug\xunit.core.dll
+D:\Projects\GitHub\CheckoutKata\CheckoutKataApp\CheckoutKataApp.Tests\bin\Debug\CheckoutKataApp.pdb
+D:\Projects\GitHub\CheckoutKata\CheckoutKataApp\CheckoutKataApp.Tests\bin\Debug\xunit.assert.pdb
+D:\Projects\GitHub\CheckoutKata\CheckoutKataApp\CheckoutKataApp.Tests\bin\Debug\xunit.assert.xml
+D:\Projects\GitHub\CheckoutKata\CheckoutKataApp\CheckoutKataApp.Tests\bin\Debug\xunit.core.pdb
+D:\Projects\GitHub\CheckoutKata\CheckoutKataApp\CheckoutKataApp.Tests\bin\Debug\xunit.core.xml
+D:\Projects\GitHub\CheckoutKata\CheckoutKataApp\CheckoutKataApp.Tests\obj\Debug\CheckoutKataApp.Tests.csprojResolveAssemblyReference.cache
+D:\Projects\GitHub\CheckoutKata\CheckoutKataApp\CheckoutKataApp.Tests\obj\Debug\CheckoutKataApp.Tests.dll
+D:\Projects\GitHub\CheckoutKata\CheckoutKataApp\CheckoutKataApp.Tests\obj\Debug\CheckoutKataApp.Tests.pdb

@@ -1,1 +1,6 @@
 D:\Projects\GitHub\CheckoutKata\CheckoutKataApp\CheckoutKataApp\bin\Debug\CheckoutKataApp.exe.config
+D:\Projects\GitHub\CheckoutKata\CheckoutKataApp\CheckoutKataApp\bin\Debug\CheckoutKataApp.exe
+D:\Projects\GitHub\CheckoutKata\CheckoutKataApp\CheckoutKataApp\bin\Debug\CheckoutKataApp.pdb
+D:\Projects\GitHub\CheckoutKata\CheckoutKataApp\CheckoutKataApp\obj\Debug\CheckoutKataApp.csprojResolveAssemblyReference.cache
+D:\Projects\GitHub\CheckoutKata\CheckoutKataApp\CheckoutKataApp\obj\Debug\CheckoutKataApp.exe
+D:\Projects\GitHub\CheckoutKata\CheckoutKataApp\CheckoutKataApp\obj\Debug\CheckoutKataApp.pdb
