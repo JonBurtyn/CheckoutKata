@@ -15,5 +15,16 @@ namespace CheckoutKataApp.Tests
 
             Assert.Equal(50, total);
         }
+
+        [Fact]
+        public void Return0ForNoItems()
+        {
+            var checkout = new DefaultCheckout();
+
+            var total = checkout.GetTotalPrice();
+
+            Assert.Equal(0, total);
+        }
+
     }
 }
