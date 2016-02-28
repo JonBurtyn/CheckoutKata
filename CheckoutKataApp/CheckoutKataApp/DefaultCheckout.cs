@@ -7,9 +7,9 @@ namespace CheckoutKataApp
     public class DefaultCheckout : ICheckout
     {
         private Dictionary<string, int> scanned = new Dictionary<string, int>();
-        private Dictionary<string, int> configuredPrices;
+        private Dictionary<string, Prices> configuredPrices;
 
-        public DefaultCheckout(Dictionary<string, int> configuredPrices)
+        public DefaultCheckout(Dictionary<string, Prices> configuredPrices)
         {
             if (configuredPrices == null) throw new ArgumentNullException("configuredPrices");
 
@@ -32,7 +32,7 @@ namespace CheckoutKataApp
             {
                 if (this.scanned.ContainsKey(configuredPrice.Key))
                 {
-                    price += this.scanned[configuredPrice.Key] * configuredPrice.Value;
+                    price += this.scanned[configuredPrice.Key] * configuredPrice.Value.UnitPrice;
                 }
             }
 
