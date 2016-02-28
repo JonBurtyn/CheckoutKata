@@ -33,26 +33,6 @@ namespace CheckoutKataApp
                 price += this.priceCalculator.GetPrice(keyValuePair.Key, keyValuePair.Value);
             }
 
-
-
-            //foreach (var configuredPrice in this.configuredPrices)
-            //{
-            //    if (this.scanned.ContainsKey(configuredPrice.Key))
-            //    {
-            //        var quantity = this.scanned[configuredPrice.Key];
-            //        var specialPrice = configuredPrice.Value.SpecialPrice;
-
-            //        if (specialPrice != null)
-            //        {
-            //            var specialPriceLots = quantity / specialPrice.Quantity;
-            //            price += specialPriceLots * specialPrice.Price;
-            //            quantity -= specialPriceLots * specialPrice.Quantity;
-            //        }
-
-            //        price += quantity * configuredPrice.Value.UnitPrice;
-            //    }
-            //}
-
             return price;
         }
     }

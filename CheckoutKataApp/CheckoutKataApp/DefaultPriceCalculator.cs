@@ -21,11 +21,8 @@ namespace CheckoutKataApp
         {
             var price = 0;
 
-            //foreach (var configuredPrice in this.configuredPrices)
-            //{
             if (this.configuredPrices.ContainsKey(sku))
                 {
-                    //var specialPriceQuantity = this.configuredPrices[sku].SpecialPrice.Quantity;
                     var specialPrice = this.configuredPrices[sku].SpecialPrice;
 
                     if (specialPrice != null)
@@ -37,7 +34,6 @@ namespace CheckoutKataApp
 
                     price += quantity * this.configuredPrices[sku].UnitPrice;
                 }
-            //}
 
             return price;
         }
