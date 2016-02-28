@@ -26,5 +26,17 @@ namespace CheckoutKataApp.Tests
             Assert.Equal(0, total);
         }
 
+        [Fact]
+        public void Return30ForOneB()
+        {
+            var checkout = new DefaultCheckout();
+
+            checkout.Scan("B");
+
+            var total = checkout.GetTotalPrice();
+
+            Assert.Equal(30, total);
+        }
+
     }
 }

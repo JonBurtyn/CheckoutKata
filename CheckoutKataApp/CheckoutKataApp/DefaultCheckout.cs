@@ -15,10 +15,15 @@ namespace CheckoutKataApp
 
         public int GetTotalPrice()
         {
-            if (items.Any())
-                return 50;
+            if (!items.Any())
+                return 0;
 
-            return 0;
+            if (items.First() == "A")
+                return 50;
+            else if (items.First() == "B")
+                return 30;
+            else
+                return 0;
         }
     }
 }
