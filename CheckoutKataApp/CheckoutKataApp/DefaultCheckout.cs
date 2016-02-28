@@ -6,24 +6,31 @@ namespace CheckoutKataApp
 {
     public class DefaultCheckout : ICheckout
     {
-        private List<string> items = new List<string>();
+        private Dictionary<string, int> scanned = new Dictionary<string, int>();
 
         public void Scan(string item)
         {
-            this.items.Add(item);
+            if (!this.scanned.ContainsKey(item))
+                this.scanned.Add(item, 0);
+
+            this.scanned[item]++;
         }
 
         public int GetTotalPrice()
         {
-            if (!items.Any())
-                return 0;
+            var price = 0;
 
-            if (items.First() == "A")
-                return 50;
-            else if (items.First() == "B")
-                return 30;
-            else
-                return 0;
+            if (this.scanned.ContainsKey("A"))
+            {
+                price += this.scanned["A"] * 50;
+            }
+
+            if (this.scanned.ContainsKey("B"))
+            {
+                price += this.scanned["B"] * 30;
+            }
+
+            return price;
         }
     }
 }
