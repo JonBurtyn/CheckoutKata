@@ -66,5 +66,6 @@ namespace CheckoutKataApp.Tests
 
             Assert.Equal(20, total);
         }
+
     }
 }
