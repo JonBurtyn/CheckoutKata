@@ -38,5 +38,18 @@ namespace CheckoutKataApp.Tests
             Assert.Equal(30, total);
         }
 
+        [Fact]
+        public void Return100ForTwoAs()
+        {
+            var checkout = new DefaultCheckout();
+
+            checkout.Scan("A");
+            checkout.Scan("A");
+
+            var total = checkout.GetTotalPrice();
+
+            Assert.Equal(100, total);
+        }
+
     }
 }
