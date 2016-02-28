@@ -36,6 +36,17 @@ namespace CheckoutKataApp
                 price += this.scanned["B"] * 30;
             }
 
+            if (this.prices != null)
+            { 
+                foreach (var configuredPrice in this.prices)
+                {
+                    if (this.scanned.ContainsKey(configuredPrice.Key))
+                    {
+                        price += this.scanned[configuredPrice.Key] * configuredPrice.Value;
+                    }
+                }
+            }
+
             return price;
         }
     }
